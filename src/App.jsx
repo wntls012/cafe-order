@@ -26,7 +26,7 @@ function App() {
     <Routes>
       {/* 모든 페이지가 Layout(머리말 · 꼬리말) 안에 그려집니다 */}
       <Route element={<Layout count={cart.length} />}>
-        <Route path="/" element={<MenuPage onAdd={handleAdd} />} />
+        <Route index element={<MenuPage onAdd={handleAdd} />} />
         <Route path="menu/:id" element={<MenuDetailPage onAdd={handleAdd} />} />
         <Route path="cart" element={<CartPage cart={cart} onRemove={handleRemove} />} />
         <Route path="*" element={<NotFoundPage />} />
