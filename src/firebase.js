@@ -12,4 +12,4 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = TODO 1(app); // 다른 파일에서는 이 auth를 가져다 씁니다
+export const auth = getAuth(app); // 다른 파일에서는 이 auth를 가져다 씁니다

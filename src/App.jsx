@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     // 로그인 상태가 정해지거나 바뀔 때마다 불림 — 처음 한 번, 로그인 · 로그아웃할 때
-    const unsubscribe = TODO 5(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
     return unsubscribe; // 화면에서 사라지면 듣기를 멈춤
