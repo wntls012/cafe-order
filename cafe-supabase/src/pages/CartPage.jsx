@@ -9,11 +9,13 @@ function CartPage({ cart, user, onRemove, onClear }) {
   const total = cart.reduce((sum, menu) => sum + menu.price, 0);
 
   async function handleOrder() {
-    const { error } = await supabase.from("orders").TODO 3({
-      TODO 4: user.id,
-      items: cart.map((menu) => menu.name),
-      total,
-    });
+    const { error } = await supabase.from("orders").insert([
+      {
+        user_id: user.id,
+        items: cart.map((menu) => menu.name),
+        total,
+      }
+    ]);
     if (error) {
       setMessage(error.message);
       return;
