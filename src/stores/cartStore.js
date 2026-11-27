@@ -1,4 +1,4 @@
-import {create} from "zustand";
+import { create } from "zustand";
 
 // 장바구니 store — 담은 메뉴의 배열(cart)과 바꾸는 함수를 한 객체에 적으면 create가 hook을 만들어 줍니다
 export const useCartStore = create((set) => ({
